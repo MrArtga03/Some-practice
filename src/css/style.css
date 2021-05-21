@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  background-color: #fff;
+  font-size: 14px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wrapper .post {
+  position: relative;
+  cursor: pointer;
+}
+.wrapper .post .insta-post {
+  max-width: 400px;
+  height: auto;
+  border-radius: 5px;
+}
+.wrapper .post .likes {
+  font-size: 1.5em;
+  margin-top: 8px;
+  color: #000;
+}
+.wrapper .post .heart-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(0px 19px 38px rgba(0, 0, 0, 0.7));
+          filter: drop-shadow(0px 19px 38px rgba(0, 0, 0, 0.7));
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  width: 0;
+}
+.wrapper .post .animate-like {
+  -webkit-animation: 2s animateLike ease-in-out forwards;
+          animation: 2s animateLike ease-in-out forwards;
+}
+@-webkit-keyframes animateLike {
+  0% {
+    width: 0;
+  }
+  5% {
+    width: 180px;
+  }
+  10% {
+    width: 150px;
+  }
+  20% {
+    width: 160px;
+  }
+  30% {
+    width: 160px;
+  }
+  40% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes animateLike {
+  0% {
+    width: 0;
+  }
+  5% {
+    width: 180px;
+  }
+  10% {
+    width: 150px;
+  }
+  20% {
+    width: 160px;
+  }
+  30% {
+    width: 160px;
+  }
+  40% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.container {
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.356);
+  border-radius: 10px;
+}
+.container .hide-tab .text {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+.container .hide-tab .text .X {
+  color: rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+}
+.container .hide-tab .person__help {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 0px 10px 0px;
+}
+.container .hide-tab .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px;
+}
+.container .hide-tab .button a {
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 9999px;
+  padding: 10px 25px;
+  color: #000;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+.container .hide-tab .button a:hover {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.container .hide-tab .help-text {
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 10px;
+}
+.container .hide-tab .help-text p a {
+  color: #29C364;
+  cursor: default;
+}
+
+.container-info {
+  display: none;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: fixed;
+  top: 33px;
+  left: 50px;
+}
+.container-info .block__info {
+  margin: 0px 10px 20px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  border-radius: 0px 25px 25px 25px;
+}
+.container-info .block__info h3 {
+  margin: 10px 50px 10px 8px;
+}
+.container-info .block__info p {
+  margin: 10px 8px 10px 8px;
+}
+
+.icon-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 20px 0px 20px 20px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 9999px;
+  padding: 5px 10px;
+}
+.icon-info span {
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0);
+}

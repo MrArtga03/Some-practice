@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    background-color: #fff;
+    font-size: 14px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .post {
+        position: relative;
+        cursor: pointer;
+    
+        .insta-post {
+            max-width: 400px;
+            height: auto;
+            border-radius: 5px;
+        }
+    
+        .likes {
+            font-size: 1.5em;
+            margin-top: 8px;
+            color: #000;
+        }
+    
+        .heart-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: drop-shadow(0px 19px 38px rgba(0, 0, 0, 0.7));
+            transform-origin: center center;
+            width: 0;
+        }
+    
+        .animate-like {
+            animation: 2s animateLike ease-in-out forwards;
+        }
+    
+        @keyframes animateLike {
+            0% {
+                width: 0;
+            }
+    
+            5% {
+                width: 180px;
+            }
+    
+            10% {
+                width: 150px;
+            }
+    
+            20% {
+                width: 160px;
+            }
+    
+            30% {
+                width: 160px;
+            }
+    
+            40% {
+                width: 0;
+            }
+    
+            100% {
+                width: 0;
+            }
+        }
+    }
+}
+
+//Hide tab
+$border-color: rgba(0, 0, 0, 0.15);
+.container {
+    display: none;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border: 1px solid rgba(0, 0, 0, 0.356);
+    border-radius: 10px;
+    
+    .hide-tab {
+        .text {
+            border: 1px solid $border-color;
+            border-radius: 10px;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+
+            .X {
+                color:rgba(0, 0, 0, 0.26);
+                cursor: pointer;
+            }
+        }
+
+        .person__help {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px 0px 10px 0px;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0px;
+            a {
+                text-decoration: none;
+                border: 1px solid $border-color;
+                border-radius: 9999px;
+                padding: 10px 25px;
+                color: #000;
+                transition: all 0.7s ease;
+
+                &:hover {
+                    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+                }
+            }
+        }
+
+        .help-text {
+            text-align: center;
+            border-top: 1px solid $border-color;
+            padding: 10px;
+
+            p {
+                a {
+                    color: #29C364;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
+
+//Info
+
+
+.container-info {
+    display: none;
+    align-items: flex-start;
+    position: fixed;
+    top: 33px;
+    left: 50px;
+    
+    .block__info {
+        margin: 0px 10px 20px 20px;
+        border: 1px solid rgba(0, 0, 0, 0.26);
+        border-radius: 0px 25px 25px 25px;
+        
+        h3 {
+            margin: 10px 50px 10px 8px;
+        }
+        
+        p {
+            margin: 10px 8px 10px 8px;
+        }
+    }
+}
+
+.icon-info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 20px 0px 20px 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: 1px solid $border-color;
+    border-radius: 9999px;
+    padding: 5px 10px;
+    
+    span {
+        font-size: 18px;
+        background: rgba(0, 0, 0, 0);
+    }
+}
+
+// .animate-form {
+//     animation: 2s animateInfo ease forwards;
+// }
+
+// @keyframes animateInfo {
+//     0% {
+//         .block__info {
+//             opacity: 0px;
+//         }
+//     }
+
+//     50% {
+//         .block__info {
+//             opacity: 0.5px;
+//         }
+//     }
+
+//     100% {
+//         .block__info {
+//             opacity: 1px;
+//         }
+//     }
+// }
